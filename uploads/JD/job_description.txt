@@ -1,0 +1,68 @@
+About the job
+About Fusemachines
+
+Fusemachines is a leading AI strategy, talent, and education services provider. Founded by Sameer Maskey Ph.D., Adjunct Associate Professor at Columbia University, Fusemachines has a core mission of democratizing AI. With a presence in 4 countries (Nepal, United States, Canada, and Dominican Republic and more than 450 full-time employees). Fusemachines seeks to bring its global expertise in AI to transform companies around the world.
+
+About the role:
+
+This is a remote, contract position responsible for designing, building, and maintaining the infrastructure required for data integration, storage, processing, and analytics (BI, visualization and Advanced Analytics).
+
+We are seeking skilled Data Engineers with a strong background in Python, Pyspark, and cloud-based big data applications. The ideal candidate will develop in an Agile environment, contributing to the architecture, design, and implementation of Big Data products. This role involves hands-on coding and collaboration with multi-disciplined teams to achieve project objectives.
+
+Contract Duration: 6 months
+
+Qualification & Experience
+
+Must have a full-time Bachelor's degree in Computer Science or similar
+At least 3 - 4 years of experience as a data engineer with strong expertise in Azure, Databricks or other hyperscalers
+2+ years of experience with Azure DevOps, Azure Cloud Platform, or other hyperscalers
+Proven experience delivering projects for Data and Analytics, as a data engineer
+Must have knowledge in SQL
+Following certifications (Minimum 1 required):
+Microsoft Certified: Azure Fundamentals
+Microsoft Certified: Azure Data Engineer Associate
+Databricks Certified Associate Developer for Apache Spark
+Databricks Certified Data Engineer Associate, nice to have
+AWS Certified Data Engineer - Associate
+Google: Professional Data Engineer
+Required Skills/Competencies
+
+Strong Programming Skills in one or more languages such as Python (must have), Scala, and proficiency in writing efficient and optimized code for data integration, storage, processing and manipulation
+Strong experience with scalable and distributed Data Processing Technologies such as Spark/PySpark (must have: experience with Azure Databricks is a plus), DBT and Kafka, to be able to handle large volumes of data
+Strong experience in designing and implementing efficient ELT/ETL processes in Azure and using open source solutions being able to develop custom integration solutions as needed
+Skilled in Data Integration from different sources such as APIs, databases, flat files, event streaming
+Expertise in data cleansing, transformation, and validation
+Proficiency with Relational Databases (Oracle, SQL Server, MySQL, Postgres, or similar) and NonSQL Databases (MongoDB or Table)
+Good understanding of Data Modeling and Database Design Principles. Being able to design and implement efficient database schemas that meet the requirements of the data architecture to support data solutions
+Strong experience in designing and implementing Data Warehousing solutions in Azure with Azure Synapse Analytics and Snowflake or Databricks
+Strong understanding of the software development lifecycle (SDLC), especially Agile methodologies
+Strong knowledge of SDLC tools and technologies Azure DevOps, including project management software (Jira, Azure Boards or similar), source code management (GitHub, Azure Repos, Bitbucket or similar), CI/CD system (GitHub actions, Azure Pipelines, Jenkins or similar) and binary repository manager (Azure Artifacts or similar)
+Strong understanding of DevOps principles, including continuous integration, continuous delivery (CI/CD), infrastructure as code (IaC), configuration management, automated testing and cost management
+Knowledge in cloud computing specifically in Microsoft Azure services related to data and analytics, such as Azure Data Factory, Azure Databricks, Azure Synapse Analytics (formerly SQL Data Warehouse), Azure Stream Analytics, SQL Server, Azure Blob Storage, Azure Data Lake Storage, Azure SQL Database, etc
+Experience in Orchestration using technologies like Apache Airflow
+Strong analytical skills to identify and address technical issues, performance bottlenecks, and system failures
+Proficiency in debugging and troubleshooting issues in complex data and analytics environments and pipelines
+Good understanding of Data Quality and Governance, including implementation of data quality checks and monitoring processes to ensure that data is accurate, complete, and consistent
+Experience with BI solutions including PowerBI and Tableau is a plus
+Good Problem-Solving skills: being able to troubleshoot data processing pipelines and identify performance bottlenecks and other issues
+Strong written and verbal communication skills to collaborate with cross-functional teams, including data architects, DevOps engineers, data analysts, data scientists, developers, and operations teams
+Ability to document processes, procedures, and deployment configurations
+Understanding of Azure security practices, including network security groups, Azure Active Directory, encryption, and compliance standards
+Ability to implement security controls and best practices within data and analytics solutions, including proficient knowledge and working experience on various cloud security vulnerabilities and ways to mitigate them
+Self-motivated with the ability to work well in a team
+A willingness to stay updated with the latest Azure services, Data Engineering trends, and best practices in the field
+Care about architecture, observability, testing, and building reliable infrastructure and data pipelines
+
+Responsibilities
+
+Design, develop, test and maintain high-performance, large-scale, complex data architectures, which support data integration (batch and real-time, ETL and ELT patterns from heterogeneous data systems: APIs and platforms), storage (data lakes, warehouses, marts, etc), processing, orchestration and infrastructure. Ensuring the scalability, reliability, and performance of data systems
+Contribute to detailed design, architectural discussions, and customer requirements sessions
+Actively participate in the design, development, and testing of big data products.
+Assess best practices and design schemas that match business needs for delivering a modern analytics solution (descriptive, diagnostic, predictive, prescriptive)
+Design and develop clear, maintainable code with automated testing using Pytest, unittest, integration tests, performance tests, regression tests, etc
+Collaborating with cross-functional teams and Product, Engineering, Data Scientists and Analysts to understand data requirements and develop data solutions, including reusable components meeting product deliverables
+Evaluating and implementing new technologies and tools to improve data integration, data processing, storage and analysis
+Evaluate, design, implement and maintain data governance solutions: cataloging, lineage, data quality and data governance frameworks that are suitable for a modern analytics solution, considering industry-standard best practices and patterns
+Ensure data quality and accuracy
+Design, Implement and maintain data security and privacy measures
+Be an active member of an Agile team, participating in all ceremonies and continuous improvement activities, being able to work independently as well as collaboratively

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Description and File Upload</title>
+    <style>
+        .spinner {
+            display: none;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-message {
+            display: none;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submit Job Description and Upload Files</h1>
+    <form id="jobForm" action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="jobDescription">Job Description:</label><br>
+        <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="files">Upload Files:</label><br>
+        <input type="file" id="files" name="files" multiple><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="spinner" id="spinner"></div>
+    <div class="loading-message" id="loadingMessage">Loading, please wait...</div>
+
+    <script>
+        document.getElementById('jobForm').addEventListener('submit', function(event) {
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('loadingMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

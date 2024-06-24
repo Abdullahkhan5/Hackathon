@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Documents</title>
+    <style>
+        .spinner {
+            display: none;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-message {
+            display: none;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Documents Loaded</h1>
+    <p>{{ num_documents }} documents have been loaded.</p>
+    <form id="analyzeForm" action="/analyze" method="POST">
+        <button type="submit">Analyze Resumes</button>
+    </form>
+
+    <div class="spinner" id="spinner"></div>
+    <div class="loading-message" id="loadingMessage">Loading, please wait...</div>
+
+    <script>
+        document.getElementById('analyzeForm').addEventListener('submit', function(event) {
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('loadingMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

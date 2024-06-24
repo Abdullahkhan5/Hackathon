@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <a href="{{ url_for('analyze') }}" class="btn btn-secondary mb-3"><i class="fas fa-arrow-left"></i>Back</a>
+    <h2>{{ candidate_info.Name }}</h2>
+    <h3>{{ candidate_info.Email }}</h3>
+    <p>Candidate has the following skills: {{ candidate_info.Skills }}</p>
+    <p>Candidate has educated in the following fields: {{ candidate_info.Education }}</p>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
