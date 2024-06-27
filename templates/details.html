@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <a href="{{ url_for('analyze') }}" class="btn btn-secondary mb-3"><i class="fas fa-arrow-left"></i>Back</a>
-    <h2>{{ candidate_info.Name }}</h2>
-    <h3>{{ candidate_info.Email }}</h3>
-    <p>Candidate has the following skills: {{ candidate_info.Skills }}</p>
-    <p>Candidate has educated in the following fields: {{ candidate_info.Education }}</p>
+    <header>
+        <a href="/">
+        <div class="logo" data-imgContainer>
+            <img src="https://www.techlogix.com/wp-content/uploads/2019/02/Techlogix-Mobile-Logo.png" alt="Logo" />
+        </div>
+        </a>
+    </header>
+    <a href="{{ url_for('analyze') }}" class="buttonLLabel"><i class="fas fa-arrow-left"></i>Back</a>
+    <!-- <embed src="{{ url_for('static', filename=file_name, _external=True) }}" type="application/pdf" width="100%" height="300px" /> -->
+    <embed
+    src="{{ url_for('static', filename=file_name, _external=True) }}"
+    type="application/pdf"
+    frameBorder="0"
+    scrolling="auto"
+    height="600px"
+    width="100%"
+></embed>
+    <h3>Info Extracted from Resume</h3>
+    <h4>{{ candidate_info.Name }}</h4>
+    <h4>{{ candidate_info.Email }}</h4>
+    <p><strong>Candidate has the following skills: </strong> {{ candidate_info.Skills }}</p>
+    <p><strong>Candidate has educated in the following fields: </strong> {{ candidate_info.Education }}</p>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

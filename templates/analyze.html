@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Results</title>
 </head>
 <body>
+    <header>
+        <a href="/">
+        <div class="logo" data-imgContainer>
+            <img src="https://www.techlogix.com/wp-content/uploads/2019/02/Techlogix-Mobile-Logo.png" alt="Logo" />
+        </div>
+        </a>
+    </header>
+
+    <a href="{{ url_for('email') }}" class="email-button" >Go to Email Page</a>
+
     {% for index in range(candidates_info| length) %}
-        <h2>{{ candidates_info[index].Name }}</h2>
-        <h3>{{ candidates_info[index].Email }}</h3>
-        <h3>Similarity: {{ avg_similarity[index] }}%</h3>
-        <form action="{{ url_for('candidate_details', candidate_no=index) }}" method="POST">
-            <input type="submit" value="More Info" />
+  
+        <form class="simple-form" action="{{ url_for('candidate_details', candidate_no=index) }}" method="POST" style="align-items: center;">
+          
+                <div class="container">
+                <h2 style="font-size: 18px; padding-bottom: 5px;">{{ candidates_info[index].Name }}</h2>
+                <h2 style="font-size: 18px; padding-bottom: 5px;">{{ candidates_info[index].Email }}</h3>
+                <h2 style="font-size: 18px; padding-bottom: 5px;" >Similarity: {{ avg_similarity[index] }}%</h2></div>
+                <input type="hidden" name="file_name" value="{{ file_names[index] }}">
+                <input type="submit" value="More Info" class="buttonLLabel"/></form>
         </form>
     {% endfor %}
-    <a href="{{ url_for('email') }}" class="btn btn-secondary mb-3">Go to Email Page</a>
 </body>
 </html>

@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetings Schedule</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover">
+    <header>
+        <a href="/">
+        <div class="logo" data-imgContainer>
+            <img src="https://www.techlogix.com/wp-content/uploads/2019/02/Techlogix-Mobile-Logo.png" alt="Logo" />
+        </div>
+        </a>
+    </header>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="table-wrapper">
+        <table class="fl-table">
             <thead>
                 <tr>
                     <th>Candidate Name</th>
@@ -23,11 +47,41 @@
                     <td>{{ schedule[1] }}</td>
                     <td>{{ schedule[2] }}</td>
                     <td>{{ schedule[3] }}</td>
+                    {% if schedule[3] != 'Not Accepted' %}
+                        <td>
+                            <form action="{{ url_for('generate_questions') }}" method="POST" class="table-form">
+                                <input type="hidden" name="file_name" value="{{ schedule[4] }}">
+                                <!-- <input type="submit" value="Send Questions" /> -->
+                                <button type="submit" class="table-buttons"  style=" 
+                                border: none;
+                                color: white;
+                                font-weight: 800;
+                                font-size: 14px;">Send Questions</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{{ url_for('reschedule_interview') }}" method="POST" class="table-form">
+                                <input type="hidden" name="candidate_email" value="{{ schedule[1] }}">
+                                <input type="hidden" name="candidate_name" value="{{ schedule[0] }}">
+                                <input type="hidden" name="interview_timing" value="{{ schedule[3] }}">
+                                <!-- <input type="submit" value="Reschedule Interview" /> -->
+                                <button type="submit" class="table-buttons"  style=" 
+                                border: none;
+                                color: white;
+                                font-weight: 800;
+                                font-size: 14px;">Reschedule Interview</button>
+                            </form>
+                        </td>
+                    {% endif %}
                 </tr>
                 {% endfor %}
             </tbody>
 
         </table>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

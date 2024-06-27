@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <form action="/email" method="post">
+    <header>
+        <a href="/">
+        <div class="logo" data-imgContainer>
+            <img src="https://www.techlogix.com/wp-content/uploads/2019/02/Techlogix-Mobile-Logo.png" alt="Logo" />
+        </div>
+        </a>
+    </header>
+    <form class="simple-form" action="/email" method="post">
         <label for="calendly">Calendly booking link:</label>
-        <input type="url" id="calendly" name="calendly" required>
+        <input type="url" id="calendly" name="calendly" placeholder="Add Meeting Link" required>
         <br>
         <label for="sender">Sender Email:</label>
-        <input type="email" id="sender" name="sender" required>
+        <input type="email" id="sender" name="sender" placeholder="Add Email" required>
         <br>
-        <button type="submit">Send Email</button>
+        <button type="submit" class="buttonLLabel"  style=" 
+        border: none;
+        color: white;
+        font-weight: 800;
+        font-size: 14px;">Send Email</button>
     </form>
 </body>
 </html>

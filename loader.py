@@ -1,4 +1,4 @@
-from langchain.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader
 
 def load_docs(directory):
   loader = DirectoryLoader(directory,show_progress=True)

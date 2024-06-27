@@ -6,13 +6,14 @@ skills_schema = ResponseSchema(name="Skills",
 output them as a comma separated Python list.")
 
 name_schema = ResponseSchema(name="Name",
-                                    description="Extract the name, and remember that a name does not contain delimeters or numbers inside it")
+                                    description="Extract the name, and remember that a name does not contain delimeters or numbers inside it, if no name is present then add a random name")
 
 email_schema = ResponseSchema(name="Email",
                                     description="Extract the email")
 
 education_level_schema = ResponseSchema(name="Education Level",
-                                    description="Extract only the candidate highest level of education degree from either one of these(Associate, Diploma, BS, MS, PHD)")
+                                    description="""Extract only the candidate highest level of education degree
+                                      from either one of these(Associate, Diploma, BS, MS, PHD)""")
 
 education_schema = ResponseSchema(name="Education",
                                     description="Extract the education fields candidate has studied \
@@ -20,11 +21,8 @@ and output them as a comma separated Python list.")
 
 response_schemas = [skills_schema,
                     email_schema,
-
                     name_schema,
-
                     education_level_schema,
-
                     education_schema]
 
 output_parser = StructuredOutputParser.from_response_schemas(response_schemas)

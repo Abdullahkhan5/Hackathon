@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>{{ successful_emails_count }} emails were sent successfully!</h1>
-    <a href="{{ url_for('schedule') }}">Show Meeting Schedule</a>
+    <header>
+        <a href="/">
+        <div class="logo" data-imgContainer>
+            <img src="https://www.techlogix.com/wp-content/uploads/2019/02/Techlogix-Mobile-Logo.png" alt="Logo" />
+        </div>
+        </a>
+    </header>
+    <div style="align-items: center;">
+        <h1 style="padding-bottom: 10px;">{{ successful_emails_count }} emails were sent successfully!</h1>
+        <a href="{{ url_for('schedule') }}" class="buttonLLabel">Show Meeting Schedule</a></div>
 </body>
 </html>

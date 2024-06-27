@@ -61,15 +61,16 @@ def calculate_el_weightage(X_list, resume):
 
    resume_education_level = ', '.join(Y_list)
 
-   print(job_education_level, resume_education_level)
+   education_level_similarity = 0.01
 
-   if (job_education_level[0] == 'B' and resume_education_level[0] in ['B', 'M', 'P']) or (job_education_level[0] == 'M' and resume_education_level[0] in ['M', 'P']) or (job_education_level[0] == 'P' and resume_education_level[0] in ['P']):
-        education_level_similarity = 1
-   elif (job_education_level[0] == 'M' and resume_education_level[0] in ['B']) or  (job_education_level[0] == 'P' and resume_education_level[0] in ['M']):
-        education_level_similarity = 0.5
-   elif (job_education_level[0] == 'P' and resume_education_level[0] in ['B']):
-        education_level_similarity = 0.1
-   else:
+   try:
+     if (job_education_level[0] == 'B' and resume_education_level[0] in ['B', 'M', 'P']) or (job_education_level[0] == 'M' and resume_education_level[0] in ['M', 'P']) or (job_education_level[0] == 'P' and resume_education_level[0] in ['P']):
+          education_level_similarity = 1
+     elif (job_education_level[0] == 'M' and resume_education_level[0] in ['B']) or  (job_education_level[0] == 'P' and resume_education_level[0] in ['M']):
+          education_level_similarity = 0.5
+     elif (job_education_level[0] == 'P' and resume_education_level[0] in ['B']):
+          education_level_similarity = 0.1
+   except Exception:
         education_level_similarity = 0.05
 
    return education_level_similarity

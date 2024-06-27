@@ -95,12 +95,12 @@ def get_meeting_timings(total_invites, scheduled_events, successful_candidates, 
             email_index = successful_emails.index(total_invites[index]['email'])
             if scheduled_events[index]['uri'] == total_invites[index]['event']:
                 date_and_time = time_conversion_to_PST(scheduled_events[index]['start_time'])
-                scheduled_timings.append([successful_candidates[email_index][0],total_invites[index]['email'], successful_candidates[email_index][2], date_and_time])
+                scheduled_timings.append([successful_candidates[email_index][0], total_invites[index]['email'], successful_candidates[email_index][2], date_and_time, successful_candidates[email_index][3]])
                 # successful_emails.remove(total_invites[index]['email'])
 
     for index in range(len(successful_emails)):
         if successful_emails[index] not in invites_emails:
-            scheduled_timings.append([successful_candidates[index][0], successful_emails[index], successful_candidates[index][2], 'Not Accepted'])
+            scheduled_timings.append([successful_candidates[index][0], successful_emails[index], successful_candidates[index][2], 'Not Accepted', successful_candidates[index][3]])
 
 
     return scheduled_timings
